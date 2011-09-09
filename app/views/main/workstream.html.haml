@@ -1,0 +1,37 @@
+
+%div{:class=>'workstreams clearfix'}
+  - @owners.each do |owner|
+    %div{:class=>'workstream', :style=>"width: #{@col_size}px" }
+      - if !owner
+        %h1
+          No Owner
+      - else
+        %h1
+          = owner
+- @months.each do |month|
+  %div{:class=>'period'}
+    %h1
+      = month[1]
+  %div{:class=>'workstreams clearfix'}
+    - @owners.each do |owner|
+      - owners_releases = @releases_by_deadline_month[month[0]][owner]
+      %div{:class=>'workstream', :style=>"width: #{@col_size}px"  }
+        - if owners_releases.blank?
+          &nbsp;
+        - else
+          - owners_releases.each do |release|
+            %h1
+              = release.name
+              - if release.accepted_at
+                %span.done Done
+              - elsif release.deadline
+                - if release.deadline < Time.now
+                  %span.overdue Overdue
+            %h2
+              - if release.deadline
+                = "Due #{release.deadline.to_s(:default)}".html_safe
+              - if release.accepted_at  
+                = " &mdash; Accepted #{release.accepted_at}".html_safe
+              - elsif !ENV['HIDE_ESTIMATES']
+                = " &mdash; Estimated #{release.estimated_finish}".html_safe
+            = RedCloth.new(release.description).to_html.html_safe

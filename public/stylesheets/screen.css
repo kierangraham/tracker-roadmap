@@ -2,16 +2,29 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 6, sass/screen.sass */
+/* line 5, sass/screen.sass */
+.clearfix {
+  *display: inline-block;
+}
+/* line 7, sass/screen.sass */
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 14, sass/screen.sass */
 body {
-  width: 50%;
+  width: 960px;
   margin-left: auto;
   margin-right: auto;
   font-family: helvetica, arial, sans-serif;
   color: #333333;
 }
 
-/* line 15, sass/screen.sass */
+/* line 23, sass/screen.sass */
 #header h1 {
   font-size: 36px;
   color: black;
@@ -19,31 +32,28 @@ body {
   border-bottom: 3px solid #666666;
 }
 
-/* line 21, sass/screen.sass */
+/* line 29, sass/screen.sass */
 #options {
   float: right;
   color: #333333;
   font-weight: bold;
 }
-/* line 25, sass/screen.sass */
-#options span {
-  border-bottom: 2px solid #666666;
-}
-/* line 27, sass/screen.sass */
+/* line 33, sass/screen.sass */
 #options a {
   color: #999999;
   text-decoration: none;
 }
-/* line 30, sass/screen.sass */
+/* line 36, sass/screen.sass */
 #options a:hover {
   color: black;
+  text-decoration: underline !important;
 }
 
-/* line 35, sass/screen.sass */
+/* line 41, sass/screen.sass */
 #content h1 {
   margin-bottom: 0px;
 }
-/* line 37, sass/screen.sass */
+/* line 43, sass/screen.sass */
 #content h1 span {
   font-size: 12px;
   text-transform: uppercase;
@@ -51,27 +61,46 @@ body {
   position: relative;
   top: -4px;
 }
-/* line 43, sass/screen.sass */
+/* line 49, sass/screen.sass */
 #content h1 span.done {
   background-color: yellow;
 }
-/* line 45, sass/screen.sass */
+/* line 51, sass/screen.sass */
 #content h1 span.overdue {
   background-color: red;
   color: white;
 }
-/* line 48, sass/screen.sass */
+/* line 54, sass/screen.sass */
 #content h1 span.behind {
   background-color: orange;
   color: white;
 }
-/* line 51, sass/screen.sass */
+/* line 57, sass/screen.sass */
 #content h2 {
   color: #cccccc;
   margin-top: 0px;
 }
+/* line 60, sass/screen.sass */
+#content .period {
+  color: #888888;
+  background-color: #eeeeee;
+  padding: 4px;
+}
+/* line 64, sass/screen.sass */
+#content .workstream {
+  float: left;
+  padding: 4px;
+}
+/* line 67, sass/screen.sass */
+#content .workstream h1 {
+  font-size: 22px;
+}
+/* line 69, sass/screen.sass */
+#content .workstream h2 {
+  font-size: 18px;
+}
 
-/* line 55, sass/screen.sass */
+/* line 73, sass/screen.sass */
 #footer {
   margin-top: 40px;
   color: #aaaaaa;

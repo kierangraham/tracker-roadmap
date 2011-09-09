@@ -2,9 +2,17 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+.clearfix
+  *display:                 inline-block
+  &:after
+    content:                " "
+    display:                block
+    height:                 0
+    clear:                  both
+    visibility:             hidden
 
 body
-  width: 50%
+  width: 960px
   margin-left: auto
   margin-right: auto
   
@@ -49,6 +57,18 @@ body
   h2
     color: #ccc
     margin-top: 0px
+  .period
+    color: #888
+    background-color: #eee
+    padding: 4px
+  .workstream
+    float: left
+    padding: 4px
+    h1
+      font-size: 22px
+    h2
+      font-size: 18px
+
     
 #footer
   margin-top: 40px

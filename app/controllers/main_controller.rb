@@ -11,6 +11,7 @@ class MainController < ApplicationController
     
     releases_sorted_by_date = @releases.select{|x| x if x.deadline }.sort{|x, y| x.deadline <=> y.deadline }
     
+    
     # Owners = Workstreams 
     # Gather owners and months for all releases
     @owners = @releases.collect{|x| x.owned_by}.uniq
@@ -30,7 +31,11 @@ class MainController < ApplicationController
       @releases_by_deadline_month[release.deadline.month][release.owned_by] << release
     end
     
-    puts @releases_by_deadline_month.inspect
+    @unscheduled_releases_by_owner = {}
+    @owners.each do |owner| 
+      @unscheduled_releases_by_owner[owner] = @releases.select{|x| x if !x.deadline && x.owned_by == owner }
+    end
+    
     @col_size = ( (958 - (@owners.size * 8)) / @owners.size).to_i
     
   end

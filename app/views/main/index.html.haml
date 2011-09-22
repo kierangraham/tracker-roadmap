@@ -8,10 +8,12 @@
         %span.overdue Overdue
       - elsif release.deadline + @project.iteration_length.weeks < release.estimated_finish
         %span.behind Behind Schedule
+      - else
+        %span.on-schedule On Schedule
   %h2
     - if release.deadline
       = "Due #{release.deadline.to_s(:default)}".html_safe
-    - if release.accepted_at  
+    - if release.accepted_at
       = " &mdash; Accepted #{release.accepted_at}".html_safe
     - elsif !ENV['HIDE_ESTIMATES']
       = " &mdash; Estimated #{release.estimated_finish}".html_safe

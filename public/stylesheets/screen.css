@@ -2,111 +2,76 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, sass/screen.sass */
 .clearfix {
-  *display: inline-block;
-}
-/* line 7, sass/screen.sass */
-.clearfix:after {
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
+  *display: inline-block; }
+  .clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
 
-/* line 14, sass/screen.sass */
 body {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
   font-family: helvetica, arial, sans-serif;
-  color: #333333;
-}
+  color: #333333; }
 
-/* line 23, sass/screen.sass */
 #header h1 {
   font-size: 36px;
   color: black;
   padding-bottom: 5px;
-  border-bottom: 3px solid #666666;
-}
-/* line 28, sass/screen.sass */
-#header h1 .small {
-  font-size: 14px;
-}
+  border-bottom: 3px solid #666666; }
+  #header h1 .small {
+    font-size: 14px; }
 
-/* line 31, sass/screen.sass */
 #options {
   float: right;
   color: #333333;
-  font-weight: bold;
-}
-/* line 35, sass/screen.sass */
-#options a {
-  color: #999999;
-  text-decoration: none;
-}
-/* line 38, sass/screen.sass */
-#options a:hover {
-  color: black;
-  text-decoration: underline !important;
-}
+  font-weight: bold; }
+  #options a {
+    color: #999999;
+    text-decoration: none; }
+    #options a:hover {
+      color: black;
+      text-decoration: underline !important; }
 
-/* line 43, sass/screen.sass */
 #content h1 {
-  margin-bottom: 0px;
-}
-/* line 45, sass/screen.sass */
-#content h1 span {
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 2px;
-  position: relative;
-  top: -4px;
-}
-/* line 51, sass/screen.sass */
-#content h1 span.done {
-  background-color: yellow;
-}
-/* line 53, sass/screen.sass */
-#content h1 span.overdue {
-  background-color: red;
-  color: white;
-}
-/* line 56, sass/screen.sass */
-#content h1 span.behind {
-  background-color: orange;
-  color: white;
-}
-/* line 59, sass/screen.sass */
+  margin-bottom: 0px; }
+  #content h1 span {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 2px;
+    position: relative;
+    top: -4px; }
+    #content h1 span.done {
+      background-color: blue; }
+    #content h1 span.overdue {
+      background-color: red;
+      color: white; }
+    #content h1 span.behind {
+      background-color: orange;
+      color: white; }
+    #content h1 span.on-schedule {
+      background-color: green;
+      color: white; }
 #content h2 {
   color: #cccccc;
-  margin-top: 0px;
-}
-/* line 62, sass/screen.sass */
+  margin-top: 0px; }
 #content .period {
   color: #888888;
   background-color: #eeeeee;
-  padding: 4px;
-}
-/* line 66, sass/screen.sass */
+  padding: 4px; }
 #content .workstream {
   float: left;
-  padding: 4px;
-}
-/* line 69, sass/screen.sass */
-#content .workstream h1 {
-  font-size: 22px;
-}
-/* line 71, sass/screen.sass */
-#content .workstream h2 {
-  font-size: 18px;
-}
+  padding: 4px; }
+  #content .workstream h1 {
+    font-size: 22px; }
+  #content .workstream h2 {
+    font-size: 18px; }
 
-/* line 75, sass/screen.sass */
 #footer {
   margin-top: 40px;
   color: #aaaaaa;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }

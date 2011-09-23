@@ -54,6 +54,7 @@ protected
         if story.story_type == "release"
           release = story
           release.estimated_finish = iteration.finish
+          release.tasks_remaining = iteration.stories.size
           @releases << release
         end
       end

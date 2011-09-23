@@ -17,4 +17,5 @@
       = " &mdash; Accepted #{release.accepted_at}".html_safe
     - elsif !ENV['HIDE_ESTIMATES']
       = " &mdash; Estimated #{release.estimated_finish}".html_safe
+    = " &mdash; 23 tasks, 48% complete".html_safe
   = RedCloth.new(release.description).to_html.html_safe

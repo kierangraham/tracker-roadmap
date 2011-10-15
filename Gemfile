@@ -7,3 +7,7 @@ gem 'hassle', :git => 'https://github.com/koppen/hassle.git'
 gem 'compass'
 gem 'RedCloth'
 gem 'pivotal-tracker'
+
+group :development, :test do
+  gem 'heroku'
+end
